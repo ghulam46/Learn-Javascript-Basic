@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML HTTP REQUEST</title>
+</head>
+<body>
+    
+    <h2>Using the XMLHttpRequest Object</h2>
+
+    <div id="demo">
+    <button type="button" onclick="loadXMLDoc()">Change Content</button>
+    </div>
+
+    <ul id="product-list"></ul>
+
+    <script>
+        let xml = new XMLHttpRequest();
+        console.log(xml);
+
+        const productList = document.getElementById('product-list');
+
+
+        fetch('https://dummyjson.com/products')
+            .then(res => {
+                if (!res.ok) {
+                throw new Error(`Terjadi kesalahan saat mengambil data (${res.status} ${res.statusText})`);
+                }
+                return res.json();
+            })
+            .then(data => {
+                const products = data.products;
+
+                // Menampilkan data produk di dalam elemen HTML
+                products.forEach(product => {
+                    const productItem = document.createElement('li');
+                    productItem.textContent = `${product.name} - ${product.price}`;
+                    productList.appendChild(productItem);
+                });
+            })
+            .catch(error => {
+                console.error('Terjadi kesalahan: ', error);
+            });
+
+        
+    </script>
+</body>
+</html>
