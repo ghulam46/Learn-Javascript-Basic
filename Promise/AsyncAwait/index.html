@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async & Await</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // async function f() {
+        //     let promise = new Promise((resolve, reject) => {
+        //         setTimeout(() => resolve("Done!"), 1000)
+        //     });
+
+        //     let result = await promise;
+            
+        //     alert(result);
+        // }
+
+        // f();
+
+
+        
+        /* Async keyword */
+        
+        // arrow function
+        // let sayHi = async () => 'Hi This is async with arrow function';
+
+        // function with declaration
+        // let sayHi = async function() {
+        //     return 'Hi This is with function';
+        // }
+
+        // Normally async
+        async function sayHi() {
+            return 'Hi This is async normally';
+        }
+
+        sayHi().then(alert);
+
+    </script>
+</body>
+</html>
