@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travesing Element</title>
+</head>
+<body>
+    <ul id="menu">
+        <li class="first">Home</li>
+        <li>Products</li>
+        <li class="current">Customer Support</li>
+        <li>Careers</li>
+        <li>Investors</li>
+        <li>News</li>
+        <li class="last">About Us</li>
+    </ul>
+
+    <div id="main">
+        <p class="note">This is a note!</p>
+    </div>
+
+    <script>
+        let content = document.getElementById('menu');
+        let content2 = document.querySelector('.note');
+        console.log(content2.parentNode)
+        // let firstChild = content.firstChild.nodeName;
+        // let firstChildElement = content.firstElementChild;
+        // let lastElementChild = content.lastElementChild;
+        let children = content.children; // HTML Collections
+        console.log(children);
+    </script>
+</body>
+</html>

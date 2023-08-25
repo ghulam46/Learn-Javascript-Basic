@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript innerHTML vs createElement</title>
+</head>
+<body>
+    <div class="container"></div>
+
+    <script>
+        let div = document.querySelector('.container');
+
+        // USING CREATE ELEMENT
+        // performa jauh lebih bagus createElement daripada innerHTML
+
+        // let p = document.createElement('p');
+        // p.textContent = 'JS DOM';
+        // div.appendChild(p);
+
+        // USING INNER HTML
+
+        // div.innerHTML += '<p>JS DOM</p>';
+        // div.innerHTML += '<p class="note">JS DOM</p>';
+
+        let fragment = document.createDocumentFragment();
+
+        for (let i = 0; i < 10; i++) {
+            let p = document.createElement('p');
+            p.textContent = `Paragraph ${i}`;
+            fragment.appendChild(p);
+        }
+        div.appendChild(fragment);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Class Name</title>
+
+    <style>
+        /* Pseudo Element */
+        .className::first-letter {
+            font-size: 2em;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li class="item">HTML</li>
+                <li class="item">CSS</li>
+                <li class="item highlight">JavaScript</li>
+                <li class="item">TypeScript</li>
+            </ul>
+        </nav>
+        <h1>getElementsByClassName Demo</h1>
+    </header>
+    <section>
+        <article>
+            <h2 class="secondary">Example 1</h2>
+            <p>Lorem, ipsum dolor.
+                <a href="">blablabla</a>
+            </p>
+        </article>
+        <article>
+            <h2 class="secondary">Example 2</h2>
+            <p>Lorem ipsum dolor sit.</p>
+        </article>
+        <p class="className">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit nam ab amet reiciendis eaque eos architecto minima esse consectetur, voluptate, quibusdam ut laborum eum molestiae, voluptatem deserunt iure quisquam dolorum. Consectetur sint minus quae ex sapiente quas commodi similique.</p>
+    </section>
+
+    <script>
+        let current = document.querySelector('.item');
+        let nextSibling = current.nextElementSibling;
+
+        console.log(current.previousElementSibling);
+
+        while(nextSibling) {
+            console.log(nextSibling);
+            nextSibling = nextSibling.nextElementSibling;
+        }
+
+        let node = document.querySelector('a');
+        // console.log(node.parentNode);
+        let element = document.querySelector("li:nth-child(3)");
+        // console.log(element);
+        let menu = document.getElementById("menu");
+        let items = menu.getElementsByClassName("item");
+        let elements = document.getElementsByClassName("secondary");
+
+        // let data = [].map.call(items, item => item.textContent);
+        let data2 = [].map.call(elements, element => element.textContent);
+        // console.log(data2);
+    </script>
+</body>
+</html>
