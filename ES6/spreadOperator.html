@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 | Spread Operator</title>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const q4 = ["Oct", "Nov", "May"];
+        
+        const year = [...q1, ...q2, ...q3, ...q4];
+        const demo = document.getElementById("demo").innerHTML = year;
+
+
+        const numbers = [45, 23, 56, 98, 1];
+        const maxValue = Math.max(...numbers);
+        const demo2 = document.getElementById("demo").innerHTML = maxValue;
+
+    </script>
+</body>
+</html>
