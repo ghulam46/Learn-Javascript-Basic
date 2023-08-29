@@ -18,10 +18,19 @@
       }
 
       function HomePage() {
+        const languages = ['Indonesian', 'English', 'Arabian', 'Germany'];
         return (
           <>
-            <Header />
-            <Header author="Sandika Galih"/>
+          <Header />
+            <ul>
+              {
+                languages.map((language) => (
+                  // key bertujuan untuk menandai sebuah element dengan nilai yang unik, karena react harus tau elemen mana yang berubah
+                  <li key={language}>{language}</li>
+                ))
+              }
+            </ul>
+            {/*<Header author="Sandika Galih"/>*/}
           </>
         );
       }
