@@ -16,15 +16,30 @@
       function Header({author}) {
         return <h1>Belajar React bersama {author ? author : 'WPU'} 🚀</h1>;
       }
-
+      
+      function Btn(props) {
+        return <button onClick={props.onClick}>{props.name}</button>;
+      }
+      
       function HomePage() {
         const languages = ['Indonesian', 'English', 'Arabian', 'Germany'];
         const [likes, setLikes] = React.useState(0);
+        const [count, setCount] = React.useState(0);
         
         function handleClick() {
           setLikes(likes + 1);
         }
 
+        function increase() {
+          setCount(count+1);
+        }
+        function decrease() {
+          count <= 0 ? setCount(0) : setCount(count-1);
+        }
+        function reset() {
+          setCount(0);
+        }
+        
         return (
           <>
             <Header />
@@ -37,7 +52,12 @@
               }
             </ul>
 
-            <button onClick={handleClick}>Like ({likes})</button>
+            <Btn name="-" onClick={decrease}/>
+            {count}
+            <Btn name="+" onClick={increase}/><br/><br/>
+            <Btn name="Reset" onClick={reset}/>
+
+            {/*<button onClick={handleClick}>Like ({likes})</button>*/}
             {/*<Header author="Sandika Galih"/>*/}
           </>
         );
