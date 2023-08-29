@@ -17,9 +17,17 @@
         return <h1>Belajar React bersama WPU 🚀</h1>;
       }
 
+      function HomePage() {
+        return (
+          <>
+            <Header />
+          </>
+        );
+      }
+
       const container = document.getElementById('root');
       const root = ReactDOM.createRoot(container);
-      root.render(<Header />);
+      root.render(<HomePage />);
 
     </script>
     <!--
