@@ -13,14 +13,14 @@
     <div id="root"></div>
     <script type="text/babel">
     
-      function Header(props) {
-        return <h1>Belajar React bersama {props.author} 🚀</h1>;
+      function Header({author}) {
+        return <h1>Belajar React bersama {author ? author : 'WPU'} 🚀</h1>;
       }
 
       function HomePage() {
         return (
           <>
-            <Header author="WPU"/>
+            <Header />
             <Header author="Sandika Galih"/>
           </>
         );
