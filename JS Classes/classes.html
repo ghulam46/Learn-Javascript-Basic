@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 | Classes</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const Car1 = new Car("Lamborgini", 2023);
+        const Car2 = new Car("Ferarri", 2020);
+
+        document.getElementById('demo').innerHTML = Car1.name + " " + Car2.name;
+    </script>
+</body>
+</html>
