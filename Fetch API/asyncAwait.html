@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API async await</title>
+</head>
+<body>
+
+    <ul id="product-list"></ul>
+
+    <script>
+        const productList = document.getElementById("product-list");
+
+        async function fetchProduct() {
+            let response = await fetch('https://dummyjson.com/products');
+            let data = await response.json();
+
+            // console.log(response.status);
+            // console.log(response.statusText);
+
+            const products = data.products;
+            products.forEach(product => {
+                const productItem = document.createElement("li");
+                productItem.textContent = `id => ${product.id}, Title => ${product.title}`;
+                productList.appendChild(productItem);
+            })
+            console.log(products);
+        }
+
+        fetchProduct();
+    </script>
+</body>
+</html>
