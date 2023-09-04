@@ -6,15 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="demo"></div>
+    <div id="globalScope"></div>
+    <div id="localScope"></div>
     <script>
         let globalScope = "Hello, this is global scope";
 
         function printGlobalScope() {
-            document.getElementById("demo").innerHTML = globalScope;
+            document.getElementById("globalScope").innerHTML = globalScope;
         }
 
         printGlobalScope();
+
+        function printLocalScope() {
+            let localScope = "Hello, this is local scope";
+            document.getElementById("localScope").innerHTML = localScope;
+        }
+
+        printLocalScope();
     </script>
 </body>
 </html>
