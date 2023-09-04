@@ -9,16 +9,16 @@
     <div id="demo"></div>
     <script>
         function outer() {
-            let outerText = `i'm from the outer function`;
+            // let outerText = `i'm from the outer function`;
             
-            function inner() { // function inner = closure
-                document.getElementById("demo").innerHTML = `i'm from the outer function`;
+            function inner(name) { // function inner = closure
+                document.getElementById("demo").innerHTML = `i'm from the ${name} function`;
             }
 
             return inner;
         }
         const closureFunction = outer();
-        closureFunction();
+        closureFunction("OUTER");
     </script>
 </body>
 </html>
