@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        // function names(a,b,c,d,e) {
+        //     console.log(`My students names:, ${a}, ${b}, ${c}, ${d}, ${e}`);
+        // }
+        // console.log(names("John", "Jane", "Todd", "Michael", "Ammar")); //undefined
+
+        function names(a,b,c,d,e) {
+            return `My students names:, ${a}, ${b}, ${c}, ${d}, ${e}`;
+        }
+
+        var student = names("John", "Jane", "Todd", "Michael", "Ammar");
+        console.log(student);
+
+        document.getElementById("demo").innerHTML = student;
+    </script>
+</body>
+</html>
