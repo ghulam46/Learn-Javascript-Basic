@@ -15,17 +15,24 @@
         async function fetchProduct() {
             let response = await fetch('https://dummyjson.com/products');
             let data = await response.json();
+            const products = data.products;
 
             // console.log(response.status);
             // console.log(response.statusText);
 
-            const products = data.products;
-            products.forEach(product => {
-                const productItem = document.createElement("li");
-                productItem.textContent = `id => ${product.id}, Title => ${product.title}`;
+            if(response.status === 200){
+                products.forEach(product => {
+                    const productItem = document.createElement("li");
+                    productItem.textContent = `id => ${product.id}, Title => ${product.title}`;
+                    productList.appendChild(productItem);
+                })
+            } else {
+                const productItem = document.createElement("h1");
+                productItem.textContent = `404 NOT FOUND 🚧`;
+                productItem.style.textAlign = 'center';
                 productList.appendChild(productItem);
-            })
-            console.log(products);
+
+            }
         }
 
         fetchProduct();
