@@ -10,14 +10,15 @@
     <script>
         const demo = document.getElementById("demo");
 
-        let array = ['1', '2'];
+        let array = ['1', '2', '3', '4', '5'];
         let people = ["Tino", "Dinda", "Charles"];
         // array.push('3'); // 1 2 3
-        // let last = array.pop(); // 2
+        // let last = array.pop(); // 5
+        let first = array.shift(); // 1
         // array = array.concat('a', 'b', 'c'); // 1 2 a b c
         // let list = people.join('-'); // tino - dinda - charles
-        people.sort(); //charles dinda tino
-        console.log(people);
+        // people.sort(); //charles dinda tino
+        console.log(last);
     </script>
 </body>
 </html>
