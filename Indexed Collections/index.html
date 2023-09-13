@@ -9,9 +9,22 @@
     <div id="demo"></div>
 
     <script>
+        const demoElement = document.getElementById("demo");
+
         let fruits = ["Mango", "Apple", "Banana"];
-        // document.getElementById("demo").innerHTML = `${fruits[2]}`; // Banana
-        document.getElementById("demo").innerHTML = `${fruits.length}`; // 3
+
+        // demoElement.innerHTML = `${fruits[2]}`; // Banana
+        // demoElement.innerHTML = `${fruits.length}`; // 3
+
+        for(let i=0; i<fruits.length; i++) {
+            // console.log(fruits[i]);
+            const ul = document.createElement("ul");
+            const li = document.createElement("li");
+
+            li.appendChild(document.createTextNode(fruits[i]));
+            ul.appendChild(li);
+            demoElement.appendChild(ul);
+        }
     </script>
 </body>
 </html>
