@@ -12,6 +12,7 @@
 
         let array = ['1', '2', '3', '4', '5'];
         let people = ["Tino", "Dinda", "Charles"];
+        let filterArr = [1, 'a', 2, 5, 'c', 4, 'b'];
         // array.push('3'); // 1 2 3
         // let last = array.pop(); // 5
         // let first = array.shift(); // 1
@@ -20,10 +21,13 @@
         // people.sort(); //charles dinda tino
         // console.log(array.indexOf('3')); // indeks ke-2
         // array.reverse(); // 5 4 3 2 1
-        let peoples = people.map((peo) => {
-            return peo.toUpperCase();
+        // let peoples = people.map((peo) => {
+        //     return peo.toUpperCase();
+        // }); // TINO DINDA CHARLER
+        let arr = filterArr.filter((arr) => {
+            return typeof arr === 'number'; // 1254
         })
-        console.log(peoples);
+        console.log(arr);
     </script>
 </body>
 </html>
