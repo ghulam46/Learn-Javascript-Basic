@@ -16,15 +16,27 @@
         // demoElement.innerHTML = `${fruits[2]}`; // Banana
         // demoElement.innerHTML = `${fruits.length}`; // 3
 
-        for(let i=0; i<fruits.length; i++) {
-            // console.log(fruits[i]);
+        // for loop
+        // for(let i=0; i<fruits.length; i++) {
+        //     // console.log(fruits[i]);
+        //     const ul = document.createElement("ul");
+        //     const li = document.createElement("li");
+
+        //     li.appendChild(document.createTextNode(fruits[i]));
+        //     ul.appendChild(li);
+        //     demoElement.appendChild(ul);
+        // }
+
+        // forEach loop
+        fruits.forEach(function(fruit){
+            // console.log(fruit);
             const ul = document.createElement("ul");
             const li = document.createElement("li");
 
-            li.appendChild(document.createTextNode(fruits[i]));
+            li.appendChild(document.createTextNode(fruit));
             ul.appendChild(li);
             demoElement.appendChild(ul);
-        }
+        });
     </script>
 </body>
 </html>
