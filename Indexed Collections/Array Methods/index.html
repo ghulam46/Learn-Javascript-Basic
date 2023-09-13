@@ -19,8 +19,11 @@
         // let list = people.join('-'); // tino - dinda - charles
         // people.sort(); //charles dinda tino
         // console.log(array.indexOf('3')); // indeks ke-2
-        array.reverse(); // 5 4 3 2 1
-        console.log(array);
+        // array.reverse(); // 5 4 3 2 1
+        let peoples = people.map((peo) => {
+            return peo.toUpperCase();
+        })
+        console.log(peoples);
     </script>
 </body>
 </html>
