@@ -11,7 +11,7 @@
     <script>
         let title = document.getElementById("demo");
 
-        function gretting( name, language ) {
+        const eksGretting = function gretting( name, language ) {
             if(language === "english") {
                 let demo = `good morning ${name}`;
                 title.innerHTML = demo;
@@ -24,7 +24,7 @@
             }
         }
 
-        gretting("Ghulam", "french");
+        eksGretting("Ghulam", "");
     </script>
 </body>
 </html>
