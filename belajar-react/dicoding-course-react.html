@@ -21,7 +21,16 @@
         const unOrderedList = React.createElement('ul', null, [listItem1, listItem2,listItem3]);
 
         const diver = React.createElement('div', null, [heading, unOrderedList]);
-        console.log(diver)
+        console.log('with createElement :', diver);
+
+        // WITH JSX
+        const divContainer = (
+          <div className="container">
+            <h1>React</h1>
+            <p>The <strong>best tool</strong> for building UI</p>
+          </div>
+        );
+        console.log('with JSX :', divContainer)
 
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
