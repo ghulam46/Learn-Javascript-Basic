@@ -14,9 +14,18 @@
     <script type="text/babel">
         const heading = React.createElement('h1', null, 'Biodata Perusahaan');
 
+        const listItem1 = React.createElement('li', null, 'Nama: Dicoding Indonesia');
+        const listItem2 = React.createElement('li', null, 'Bidang: Education');
+        const listItem3 = React.createElement('li', null, 'Tagline: Decode Ideas, Discover Potential.');
+
+        const unOrderedList = React.createElement('ul', null, [listItem1, listItem2,listItem3]);
+
+        const diver = React.createElement('div', null, [heading, unOrderedList]);
+        console.log(diver)
+
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
-        root.render(heading);
+        root.render(diver);
 
     </script>
     <!--
